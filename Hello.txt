@@ -1,5 +1,5 @@
-Hello 
-cat command show this file
+git config --global user.name "mfislammir"
+git config --global user.email "mfislammir@gmail.com:"
 
 git init
 git add .
@@ -17,4 +17,3 @@ git branch -M main
 git remote add origin https://github.com/mfislammir/demo100.git
 git push -u origin main
 
-please work
