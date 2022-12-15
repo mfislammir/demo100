@@ -1,5 +1,18 @@
 Hello 
 cat command show this file
 
-hit init
+git init
 git add .
+git status
+git commit -m"Something relavent to changes"
+LM local machine
+rm remote machine (github)
+
+
+echo "# demo100" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/mfislammir/demo100.git
+git push -u origin main
