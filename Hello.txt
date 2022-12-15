@@ -1,0 +1,5 @@
+Hello 
+cat command show this file
+
+hit init
+git add .
