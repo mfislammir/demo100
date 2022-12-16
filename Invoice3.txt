@@ -1,0 +1,141 @@
+package basic;
+
+import java.time.LocalDate;
+import java.util.Date;
+import java.util.Scanner;
+
+public class InvoiceHw3 {
+
+	public static void main(String[] args) {
+		
+		
+		 
+		System.out.println("\t\t\t\t\t      INVOICE");
+		Scanner invoice = new Scanner(System.in);
+		
+		Date date = new Date();
+		LocalDate tdaydate = LocalDate.now();
+		LocalDate duedate = tdaydate.plusDays(4);
+		System.out.println("\t\t\t\t\tToday   "+tdaydate);
+		System.out.println("\t\t\t\t\tDue Date "+duedate);
+		/**
+		 
+		System.out.println("Please enter invoice Number");
+		int number =invoice.nextInt();
+		System.out.println("Invoice number is  "+number);
+		
+		System.out.println("Enter Client Name Please");
+		String cFirstName = invoice.next();
+		String cLastName = invoice.next();
+		System.out.println(cFirstName+" "+cLastName);
+		
+		System.out.println("enter Client address with zip code");
+		String cAddress =invoice.next();
+		String cAddress1 =invoice.next();
+		String cAddress2 =invoice.next();
+		int zipCode = invoice.nextInt();
+		System.out.println(cAddress+" "+cAddress1+" "+cAddress2+" "+zipCode);
+		System.out.println("Enter City, State and Country Name");
+		String cCity=invoice.next();
+		String cState=invoice.next();
+		String cCountry = invoice.next();
+		System.out.println(cCity+" "+cState+" "+cCountry);
+		
+		
+		System.out.println("Please enter you company Name");
+		String companyName = invoice.next();
+		String companyName1 = invoice.next();
+		System.out.println(companyName+" "+companyName1);
+		
+		System.out.println("enter company address including country");
+		String address =invoice.next();
+		String address1 =invoice.next();
+		String address2 =invoice.next();
+		System.out.println(address+" "+address1+" "+address2);
+		System.out.println("Enter City and State Name");
+		String city=invoice.next();
+		String state=invoice.next();
+		String country =invoice.next();
+		System.out.println(city+" "+state+" "+country);
+		System.out.println("Please enter phone Number");
+		String phoneNumber=invoice.next();
+		System.out.println(phoneNumber);
+		System.out.println("Please enter email address");
+		String email=invoice.next();
+		System.out.println(email);
+		System.out.println("Please enter web address");
+		String webAdress=invoice.next();
+		System.out.println(webAdress);
+		*
+		*/
+		// product part
+		System.out.println("Please Enter Product name");
+		String productName =invoice.next();
+		System.out.println("You Selected "+productName);
+		System.out.println("please enter the quantity of select Product");
+		int productQty =invoice.nextInt();
+		System.out.println("Your total selection is "+productQty);
+		System.out.println("Now choose a selling price ill give cost for each item plus total");
+		double productCost = invoice.nextDouble();
+		System.out.println("$"+productCost);
+		double totalCost=productQty*productCost;
+		System.out.println("$"+totalCost);
+		
+		System.out.println("Please Enter another Product name");
+		String productName2 =invoice.next();
+		System.out.println("You Selected "+productName2);
+		System.out.println("please enter the quantity of select Product");
+		int productQty2 =invoice.nextInt();
+		System.out.println("Your total selection is "+productQty2);
+		System.out.println("Now choose a selling price for 2nd item i will give cost for each item plus total");
+		double productCost2 = invoice.nextDouble();
+		System.out.println("$"+productCost2);
+		double totalCost2=productQty2*productCost2;
+		System.out.println("$"+totalCost2);		
+		
+		
+		System.out.println("Please Enter you 3rd Product name");
+		String productName3 =invoice.next();
+		System.out.println("You Selected "+productName2);
+		System.out.println("please enter the quantity of select Product");
+		int productQty3 =invoice.nextInt();
+		System.out.println("Your total selection is "+productQty3);
+		System.out.println("Now choose a selling price for 3rd item i will give cost for each item plus total");
+		double productCost3 = invoice.nextDouble();
+		System.out.println("$"+productCost3);
+		double totalCost3=productQty3*productCost3;
+		System.out.println("$"+totalCost3);			
+				
+		System.out.println("Please Enter last Product name");
+		String productName4 =invoice.next();
+		System.out.println("You Selected "+productName4);
+		System.out.println("please enter the quantity of select Product");
+		int productQty4 =invoice.nextInt();
+		System.out.println("Your total selection is "+productQty4);
+		System.out.println("Now choose a selling price i will give cost for each item plus total and Subtotal");
+		double productCost4 = invoice.nextDouble();
+		System.out.println("$"+productCost3);
+		double totalCost4=productQty4*productCost4;
+				System.out.println("$"+totalCost4);					
+				
+		double subTotal = totalCost + totalCost2 + totalCost3 + totalCost4;
+			System.out.println("Subtotal  $"+subTotal);	
+			System.out.println("Now Enter A Discount Rate,i will show total after discount");
+			double disCount =invoice.nextDouble();
+			System.out.println("You are getting "+disCount+ " of Discount");
+			double disCount1 = subTotal*disCount; 
+			System.out.println("Your total Discount $"+disCount1);
+			double totalAfterDiscount =subTotal - disCount1;
+			System.out.println("Total after Discount $"+totalAfterDiscount);
+			
+			System.out.println("Now please enter a Tax Rate and Invoice Total");
+			double taxRate = invoice.nextDouble();
+			System.out.println(taxRate+ " will be added to you total");
+			double totalTax = totalAfterDiscount * taxRate;
+			System.out.println("Total Tax $"+totalTax);
+			double invoiceTotal = totalAfterDiscount + totalTax;
+			System.out.println("Your Invoice total is $"+String.format("%2f", invoiceTotal));
+			
+			System.out.println(date);
+			invoice.close();						
+	}
