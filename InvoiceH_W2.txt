@@ -1,0 +1,96 @@
+package basic;
+
+import java.util.Date;
+
+public class JavaHomeWork2 {
+	int newAmount8;
+	int newAmount3;
+	int newAmount6;
+
+	public static void main(String args[]) {
+
+		Date date = new Date();
+         //Assign Product Name
+		String noteBook = "NOTEBOOK", folDer = "FOLDER",
+				backPack = "BACKPACK", penCil = "PENCIL",
+				pen5 = "PEN", marKer = "MARKER",
+				eraSer = "ERASER", calCulaTor = "CALCULATOR";
+		//Assign quantity
+		
+		int noteBookQty = 5, folderQty = 6, backPackQty = 7, pencilQty = 9, 
+			penQty = 11, markerQty = 14, erasarQty = 15, calCulatorQty = 18;
+		
+		// assign unit cost
+		double netBookUnitCost = 9, folderUnitCost = 12.32, backPackUnitCost = 15.45, 
+				pencilUnitCost = 9.11, penUnitCost = 7.5, 
+				markerUnitCost = 8.89,erasarUnitCost = 9.45, calculatorUnitCost = 6.45;
+		
+		// find out the cost for each products
+		double noteBookTotal = noteBookQty * netBookUnitCost, 
+				folderTotal = folderQty * folderUnitCost,
+				backPackTotal = backPackQty * backPackUnitCost,
+				pencilTotal = pencilQty * pencilUnitCost,
+				penTotal = penQty * penUnitCost,
+				markerTotal = markerQty * markerUnitCost,
+				erasarTotal = erasarQty * erasarUnitCost,
+				calCulatorTotal = calCulatorQty * calculatorUnitCost;
+		
+		// Sub-total before tax and discount
+		double subTotal = noteBookTotal + folderTotal + backPackTotal +pencilTotal +
+				penTotal + markerTotal + erasarTotal + calCulatorTotal;
+		// total discount on sub-total
+		double disCountRate = 0.15;
+		double disCount = subTotal * disCountRate;
+		
+		// tax rate
+		double taxRate = .0875;
+		
+		// total tax amount on discounted price
+		double taxDeduction = (subTotal - disCount) * taxRate;
+		
+		// net amount with tax after excluding discount
+		double netTotal = (subTotal - disCount) + taxDeduction;
+
+		// Convert double type variable value to integer type value
+		int newNetTotal = (int) netTotal;
+		int newTaxDeduction = (int) taxDeduction;
+		int newDiscount = (int) disCount;
+		
+		// int nAmount8 = (int) amount8;
+		// create an object
+		HomeWork2 learnCasting = new HomeWork2();
+		learnCasting.newAmount3 = (int) backPackTotal;
+		learnCasting.newAmount6 = (int) markerTotal;
+		learnCasting.newAmount8 = (int) calCulatorTotal;
+
+		System.out.println("\t\t\t\t\t\tINVOICE\t\nINVOICE NUMBER\t\t\t\t\t\t\t\t\t\tDATE OF ISSUE"
+				+ "\n00001\t\t\t\t\t\t\t\t\t\t\t\"12/13/2022\" ");
+
+		System.out.println("\t\t\t\t\t\t\t\t\t\t      \'Your Company Name\'"
+				+ "\nBILLED TO\t\t\t\t\t\t\t\t\t       \'123 Your Street\'"
+				+ "\nClient Name\t\t\t\t\t\t\t\t\t      \"123 Your Street\""
+				+ "\nStreet Address\t\t\t\t\t\t\t\t\t\t\'571-302-9404\'"
+				+ "\nCity, State, Country\t\t\t\t\t\t\t\t     \"mfislammir@gmail.com\""
+				+ "\nZIP Code\t\t\t\t\t\t\t\t\t\tYourwebsite.com "
+				+ "\n--------------------------------------------------------------------------------------------------------|"
+				+ "\nDESCRIPTION\t\t\t\t\tUNIT COST   QTY/HR RATE\t\t        AMOUNT"
+				+ "\n--------------------------------------------------------------------------------------------------------|");
+		System.out.println(noteBook+"\t\t\t\t\t $" + netBookUnitCost + "\t\t" + noteBookQty + "\t\t\t$" + noteBookTotal
+				+ "\n"+folDer+"\t\t\t\t\t\t $" + folderUnitCost + "\t\t" + folDer + "\t\t\t$" + folderTotal
+				+ "\n"+backPack+"\t\t\t\t\t" + backPackUnitCost + "\t\t" + backPackQty + "\t\t\t$" + learnCasting.newAmount3
+				+ "\n"+penCil+"\t\t\t\t\t\t" + pencilUnitCost + "\t\t" + pencilQty + "+\t\t\t$" + pencilTotal + "\n"+pen5+"\t\t\t\t\t\t"
+				+ penUnitCost + "\t\t" + penQty + " \t\t\t$" + penTotal + "\n"+marKer+"\t\t\t\t\t\t" + markerUnitCost + "\t\t" + markerQty
+				+ "\t\t\t$" + learnCasting.newAmount6 + "\n"+eraSer+"\t\t\t\t\t\t" + erasarUnitCost + " \t\t" + erasarQty + "\t\t\t$"
+				+ erasarTotal + "\n"+calCulaTor+"\t\t\t\t\t" + calculatorUnitCost + "\t\t" + calCulatorQty + "\t\t\t$" + learnCasting.newAmount8);
+
+		System.out.println(
+				"--------------------------------------------------------------------------------------------------------|"
+						+ "\nINVOICE TOTAL\t\t\t\t\t\t\t\t      SUBTOTAL  $" + subTotal + "\n$" + netTotal
+						+ "\t\t\t\t\t\t\t\t      DISCOUNT  $" + newDiscount + "\n\t\t\t\t\t\t\t\t\t    (TAX-RATE) $"
+						+ taxRate + "\n\t\t\t\t\t\t\t\t\t\tTAX     $" + newTaxDeduction
+						+ "\n\t\t\t\t\t\t\t\t\t\tTOTAL   $" + newNetTotal);
+
+		System.out.println("TERMS" + "\n" + date);
+	}
+
+}
